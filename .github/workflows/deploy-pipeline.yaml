@@ -82,7 +82,7 @@ jobs:
           inlineScript: |
             az storage blob upload \
               --file "./${{github.sha}}.zip" \
+              --name "FunctionApp.zip" \
               --connection-string ${{secrets.STG_CONNECTION_STRING}} \
-              -c gha-release \
-              -n FunctionApp.zip 
-    
+              --container-name gha-release \
+              --account-name yzacg90293232
