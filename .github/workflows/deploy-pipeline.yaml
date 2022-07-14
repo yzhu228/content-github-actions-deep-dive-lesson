@@ -86,3 +86,4 @@ jobs:
               --container-name gha-release \
               --account-name yzacg90293232 \
               --connection-string ${{secrets.STG_CONNECTION_STRING}}
+              
