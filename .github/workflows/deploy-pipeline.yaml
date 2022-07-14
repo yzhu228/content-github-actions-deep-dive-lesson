@@ -74,6 +74,8 @@ jobs:
           asset_path: ./${{ github.sha }}.zip
           asset_name: source_code_with_libraries.zip
           asset_content_type: application/zip
+      - name: List current directory content
+        run: ls -la
       - name: deploy to Azure Storage Account
         uses: Azure/cli@v1
         with:
