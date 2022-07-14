@@ -80,8 +80,9 @@ jobs:
         uses: Azure/cli@v1
         with:
           inlineScript: |
-            az storage blob upload --connection-string ${{secrets.STG_CONNECTION_STRING}} \
+            az storage blob upload \
+              --file "./${{github.sha}}.zip" \
+              --connection-string ${{secrets.STG_CONNECTION_STRING}} \
               -c gha-release \
-              --data "Single string" \ 
               -n FunctionApp.zip 
     
