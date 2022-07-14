@@ -83,6 +83,6 @@ jobs:
             az storage blob upload \
               --file "./${{github.sha}}.zip" \
               --name "FunctionApp.zip" \
-              --connection-string ${{secrets.STG_CONNECTION_STRING}} \
               --container-name gha-release \
-              --account-name yzacg90293232
+              --account-name yzacg90293232 \
+              --connection-string ${{secrets.STG_CONNECTION_STRING}}
